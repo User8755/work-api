@@ -19,6 +19,9 @@ const tasks = new mongoose.Schema({
     required: true,
     minlength: 1,
   },
+  complite: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model('tasks', tasks);
