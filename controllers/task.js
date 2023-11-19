@@ -4,13 +4,12 @@ module.exports.getTask = (req, res, next) => {
   tasks
     .find({})
     .then((item) => res.send(item))
-    // eslint-disable-next-line no-console
     .catch((err) => next(err));
 };
 
 module.exports.createTask = (req, res, next) => {
   const {
-    task, priorities, inprogress, description,
+    task, priorities, inprogress, description, complite,
   } = req.body;
   tasks
     .create({
@@ -18,6 +17,7 @@ module.exports.createTask = (req, res, next) => {
       priorities,
       inprogress,
       description,
+      complite,
     })
     .then((item) => res.send(item))
     .catch((err) => next(err));
