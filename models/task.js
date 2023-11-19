@@ -21,7 +21,6 @@ const tasks = new mongoose.Schema({
   },
   complite: {
     type: String,
-    default: new Date(),
   },
 });
 
